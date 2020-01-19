@@ -101,6 +101,7 @@ class App extends Component{
         if(typeof row !== 'undefined'){
             this.setState({
                 productCart:[],
+                itemCount:[],
                 bike:"Thanks for your order"
             });
         
