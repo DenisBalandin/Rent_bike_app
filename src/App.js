@@ -31,6 +31,9 @@ class App extends Component{
         const item = itemCounts.find(item => item.id === id);
         const indexItemCount = itemCounts.indexOf(item);
         var countItem = 1;
+        this.setState({
+            bike: ''
+        }); 
         if(typeof item !== 'undefined'){
             countItem = parseInt(itemCounts[indexItemCount]['value']);
         }
