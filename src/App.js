@@ -34,17 +34,27 @@ class App extends Component{
         if(typeof item !== 'undefined'){
             countItem = parseInt(itemCounts[indexItemCount]['value']);
         }
-        if(indexCart == -1){
+        if(indexCart === -1){
             this.setState({
                 productCart:[...this.state.productCart, { 
                     id:id,
                     price:rows[index]['price'],
                     number:countItem,
-                    type:rows[index]['product_type']
+                    type:rows[index]['product_type'],
                 }],
+                itemCount:[...this.state.itemCount, { id:id,value:countItem}],
             });
         }else{
-            rowsCart[indexCart]['number'] = countItem;
+            if(countItem != rowsCart[indexCart]['number']){
+                rowsCart[indexCart]['number'] = countItem;
+            }else{
+                rowsCart[indexCart]['number'] = rowsCart[indexCart]['number']+1;
+                itemCounts[indexItemCount]['value'] = countItem +1;
+                this.setState({
+                    itemCount: itemCounts
+                }); 
+            }
+            
             this.setState({
                 productCart: rowsCart
             }); 
