@@ -1,3 +1,8 @@
+Link to app  Rent Bike - http://rentbike.mcdir.ru
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
