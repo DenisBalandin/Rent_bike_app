@@ -32,6 +32,15 @@ code {
         margin: 0 auto 20px auto;
         display: flex;
         flex-wrap: wrap;
+        .go_back{
+            margin: 15% 0 0 0;
+            font-size: 25px;
+            color: #484848;
+            a{
+                text-decoration: none!important;
+            }
+
+        }
         .category{
             display: flex;
             h3{
@@ -51,6 +60,7 @@ code {
         .cart{
             display: flex;
             margin-left:auto;
+            a{text-decoration: none;}
             .total_price{
                 width: 160px;
                 display: flex;
@@ -78,15 +88,58 @@ code {
                 padding: 4px 0;
                 border-radius: 50px;
                 cursor: pointer;
+            
             }
         }
-
     }
 }
 //Body
+.finish_on{
+    display: none!important;
+}
+.finish_off{
+    display: block!important;
+}
+#finish_order{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    text-align: center; 
+}
 #body{
     width: 80%;
     margin: 0 auto 0 auto;
+    .form_order{
+        width: 90%;
+
+        margin: 3% auto 3% auto;
+        display: flex;
+        justify-content: space-between;
+        input{
+            width: 30%; 
+            padding: 10px;
+        }
+    }
+
+    .finish_order_button{
+        background:#54c58c;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+        margin: 0 auto 0 auto;
+        cursor: pointer;
+    }
+    .cart_order{
+        margin: 20px 0;
+    }
+    .cart_item{
+        width: 100%;
+        background: #ffff;
+        border: #484848 1 px solid;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 10px 0 10px 0;
+    }
     .finish_order{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: #414b56;
@@ -121,6 +174,14 @@ code {
                 margin: 0 auto 10px auto;
                 color: #203461;
                 font-size: 18px;
+                a{
+                    color: #203461;
+                    text-decoration: none;
+                }
+                a:hover{
+                    text-decoration: underline;
+
+                }
             }
             .product_description{
                 width: 85%;
@@ -160,6 +221,41 @@ code {
             }
             
         }  
+    }
+}
+#product_page{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    h1{
+        text-align: center;
+        margin: 0 0 3% 0;
+    }
+    .product_page_content{
+        display: flex;
+        justify-content: space-between;
+        .product_button{
+            margin: 20px 0 0 0;
+            background:#54c58c;
+            margin: 2% 0;
+            width: 60px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            padding: 5px 0;
+            color: #ffff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .product_image{
+
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+        .product_text{
+            width: 30%;
+        }
     }
 }
 @media all and (max-width: 1250px){
